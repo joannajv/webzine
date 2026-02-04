@@ -1,0 +1,67 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: beige;
+	text-align: left;
+}
+body {
+	font-family: "Gill Sans", sans-serif;
+}
+.container {
+  max-width: 700px;  
+  margin: 0 auto;     
+  padding: 1rem;
+}
+
+.boxtwo {
+	max-width: 700px;  
+  margin: 0 auto;     
+  padding: 1rem;
+}
+
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.custom-button {
+  background-color: rgba(255, 255, 255, 0.50);
+  color: black;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.custom-button:hover {
+  background-color: red;
+  color:white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Active/pressed effect */
+.custom-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
