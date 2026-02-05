@@ -15,6 +15,11 @@ body {
   width: 100%;
   height: 50px;
 }
+.bigtop a {
+    text-decoration: none; /* remove underline */
+    color: inherit;        /* keep existing colors */
+    display: block;        /* ensure it fills the div */
+}
 
 
 
@@ -120,4 +125,17 @@ body {
   max-width: 700px;  
   margin: 0 auto;     
   padding: 1rem;
+}
+
+
+/* Bottom button fix */
+.bottom-button {
+  max-width: 700px;      /* match .container width */
+  margin: 1rem auto;     /* center on page */
+  padding: 0 1rem;
+}
+
+.bottom-button .custom-button {
+  width: 100%;           /* stretch nicely */
+  flex: none;            /* disable flex stretching logic */
 }
