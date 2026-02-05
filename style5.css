@@ -115,9 +115,13 @@ body::after {
 
 
 .scarybox {
-display: flex;
-  width: 100px;
-  height: 100px;
+  display: flex;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  width: 70px;
+  height: 60px;
   overflow: hidden;
   background-color:whitesmoke;
   border: 5px outset red;
