@@ -1,0 +1,131 @@
+body {
+	background: black;
+}
+
+
+.container {
+	display:flex;
+	flex-direction: column;
+}
+.red-container{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-evenly;
+}
+.circle{
+	width: 50vw;
+	height:50vw;
+	border-radius:100%;
+	background-color:red;
+	filter:blur(100px);
+	animation-name:shrink;
+	animation-direction:alternate-reverse;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+}
+
+.seccontainer {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.circle2{
+	width: 50vw;
+	height:50vw;
+	border-radius:100%;
+	background-color:red;
+	filter:blur(100px);
+	animation-name:shrink2;
+	animation-direction:alternate-reverse;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+}
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+}
+@keyframes shrink2 {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+}
+
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: pink;
+    filter: blur(120px);
+    left: -20vw;
+    top: 20%;
+    opacity: 0.6;
+    animation: sideFloatLeft 10s ease-in-out infinite alternate;
+}
+
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: pink;
+    filter: blur(120px);
+    right: -20vw;
+    bottom: 20%;
+    opacity: 0.6;
+    animation: sideFloatRight 12s ease-in-out infinite alternate;
+}
+@keyframes sideFloatLeft {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-60px) scale(0.9);
+    }
+}
+
+@keyframes sideFloatRight {
+    0% {
+        transform: translateY(0) scale(0.95);
+    }
+    100% {
+        transform: translateY(60px) scale(1.05);
+    }
+}
+
+
+.scarybox {
+display: flex;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background-color:whitesmoke;
+  border: 5px outset red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+}
+
+}
