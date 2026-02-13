@@ -15,9 +15,9 @@ body {
   height: 50px;
 }
 .bigtop {
-    text-decoration: none; /* remove underline */
-    color: inherit;        /* keep existing colors */
-    display: block;        /* ensure it fills the div */
+    text-decoration: none; 
+    color: inherit;        
+    display: block;       
 }
 
 
@@ -69,14 +69,14 @@ body {
 .button-row {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;       /* force a single row */
+  flex-wrap: nowrap;       
   gap: 1rem;              
   margin: 2rem 0;
 }
 
 .custom-button {
-  flex: 1 1 0;             /* grow and shrink equally */
-  min-width: 0;             /* allow shrinking below 120px */
+  flex: 1 1 0;             
+  min-width: 0;             
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
   padding: 12px 24px;
@@ -111,8 +111,8 @@ body {
     gap: 0.5rem;
   }
   .button-row .custom-button {
-    font-size: 12px;        /* shrink text */
-    padding: 8px 10px;      /* shrink padding */
+    font-size: 12px;        
+    padding: 8px 10px;      
   }
 }
 
@@ -175,7 +175,7 @@ body {
 .image-stack {
   display: flex;
   flex-direction: column;
-  gap: 20px;              /* space between images */
+  gap: 20px;              
   align-items:center;
 }
 
@@ -193,9 +193,9 @@ body {
 }
 
 .image-stack a:hover img {
-  transform: scale(1.05);  /* slight zoom on hover */
-  opacity: 0.9;             /* subtle feedback */
-  cursor: pointer;           /* show hand icon */
+  transform: scale(1.05);  
+  opacity: 0.9;             
+  cursor: pointer;           
 }
 
 /* ================= FOOTER ================= */
@@ -203,8 +203,8 @@ body {
 .site-footer {
   margin-top: 4rem;
   padding: 2rem 1rem;
-  background-color: #111;          /* dark dramatic */
-  border-top: 2px solid red;       /* matches your theme */
+  background-color: #111;          
+  border-top: 2px solid red;       
 }
 
 .footer-links {
