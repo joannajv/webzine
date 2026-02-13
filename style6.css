@@ -198,68 +198,35 @@ body {
   cursor: pointer;           /* show hand icon */
 }
 
+/* ================= FOOTER ================= */
 
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  background-color: #111;          /* dark dramatic */
+  border-top: 2px solid red;       /* matches your theme */
+}
 
-/* ================= 2 BUTTONS ================= */
-.bottom-button {
+.footer-links {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;       /* force a single row */
-  gap: 1rem;              
-  margin: 2rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
 }
 
-.bottom-custom {
-  flex: 1 1 0;             /* grow and shrink equally */
-  min-width: 0;             /* allow shrinking below 120px */
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+.footer-links a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.2s ease;
 }
 
-.buttom-custom:hover {
-  background-color: red;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.buttom-custom:active {
-  transform: translateY(0);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 500px) {
-  .button-row {
-    gap: 0.5rem;
-  }
-  .buttom-button .bottom-custom {
-    font-size: 12px;        /* shrink text */
-    padding: 8px 10px;      /* shrink padding */
-  }
+.footer-links a:hover {
+  color: red;
 }
 
 
 
-/* Bottom button (outside .button-row) fix */
-.container + .bottom-custom{
-  display: inline-flex;  
-  width: auto;            
-  flex: none;             
-  margin: 1rem auto;      
-}
 
 /* Container sections */
 .container {
