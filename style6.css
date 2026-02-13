@@ -199,15 +199,17 @@ body {
 }
 
 
-/* bottom button */
+
+/* ================= 2 BUTTONS ================= */
 .bottom-button {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;       /* force a single row */              
+  justify-content: center;
+  flex-wrap: nowrap;       /* force a single row */
+  gap: 1rem;              
   margin: 2rem 0;
 }
 
-.bottom-button {
+.bottom-custom {
   flex: 1 1 0;             /* grow and shrink equally */
   min-width: 0;             /* allow shrinking below 120px */
   background-color: rgba(255, 255, 255, 0.5);
@@ -219,7 +221,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   transition:
     background-color 0.3s ease,
@@ -227,19 +229,44 @@ body {
     box-shadow 0.2s ease;
 }
 
-.bottom-custom:hover {
+.buttom-custom:hover {
   background-color: red;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.bottom-custom:active {
+.buttom-custom:active {
   transform: translateY(0);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 500px) {
+  .button-row {
+    gap: 0.5rem;
+  }
+  .buttom-button .bottom-custom {
+    font-size: 12px;        /* shrink text */
+    padding: 8px 10px;      /* shrink padding */
+  }
+}
 
+
+
+/* Bottom button (outside .button-row) fix */
+.container + .bottom-custom{
+  display: inline-flex;  
+  width: auto;            
+  flex: none;             
+  margin: 1rem auto;      
+}
+
+/* Container sections */
+.container {
+  max-width: 700px;  
+  margin: 0 auto;     
+  padding: 1rem;
+}
 
 
 
