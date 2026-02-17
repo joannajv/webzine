@@ -65,7 +65,7 @@ body {
   to { transform: translateX(-220%); }
 }
 
-/* bUTTONS */
+/* ================= BUTTONS ================= */
 .button-row {
   display: flex;
   justify-content: center;
@@ -131,72 +131,4 @@ body {
   max-width: 700px;  
   margin: 0 auto;     
   padding: 1rem;
-}
-
-/* craigslist kinda listing*/
-.cl-listing {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: transparent;   
-  border: 2px solid red;       
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.cl-listing .post-title {
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: black;
-}
-
-.cl-listing .meta {
-  font-size: 0.85rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.cl-listing .images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.cl-listing .images img {
-  max-width: 48%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.cl-listing .description p {
-  margin-bottom: 1rem;
-  line-height: 1.5;
-  color: #222;
-}
-
-.cl-listing .reply-button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: rgba(255,255,255,0.6);
-  border: 2px solid red;
-  border-radius: 6px;
-  color: black;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.cl-listing .reply-button:hover {
-  background-color: red;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* Responsive adjustments */
-@media (max-width: 500px) {
-  .cl-listing .images img {
-    max-width: 100%;
-  }
 }
