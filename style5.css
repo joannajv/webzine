@@ -1,8 +1,9 @@
-/* RESET + BODY */
+/* RESET */
 * {
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   margin: 0;
   min-height: 100vh;
@@ -12,99 +13,45 @@ body {
   font-family: monospace;
 }
 
-/* BACKGROUND FLOATING GLOWS */
+/* SINGLE CENTER GLOW */
 body::before {
   content: "";
-  position: absolute;
-  width: 40vw;
-  height: 40vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  height: 60vw;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: pink;
-  filter: blur(120px);
-  left: -20vw;
-  top: 20%;
-  opacity: 0.6;
-  animation: sideFloatLeft 10s ease-in-out infinite alternate;
+  background: red;
+  filter: blur(150px);
+  opacity: 0.9;
   z-index: 0;
+  animation: glowPulse 4s ease-in-out infinite alternate;
 }
 
-body::after {
-  content: "";
-  position: absolute;
-  width: 40vw;
-  height: 40vw;
-  border-radius: 50%;
-  background: pink;
-  filter: blur(120px);
-  right: -20vw;
-  bottom: 20%;
-  opacity: 0.6;
-  animation: sideFloatRight 12s ease-in-out infinite alternate;
-  z-index: 0;
-}
-
-/* CONTAINERS */
-.container {
-  display: flex;
-  flex-direction: column;
-  z-index: 0;
-}
-
-.red-container,
-.seccontainer {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-/* RED BLOBS */
-.circle,
-.circle2 {
-  width: 50vw;
-  height: 50vw;
-  border-radius: 50%;
-  background-color: red;
-  filter: blur(100px);
-  z-index: 0;
-}
-
-/* TOP BLOBS */
-.circle {
-  animation: shrink 2s ease-in-out infinite alternate;
-}
-
-/* BOTTOM BLOBS */
-.circle2 {
-  animation: shrink2 2s ease-in-out infinite alternate;
-}
-
-/* SCARY BOX (CENTERPIECE) */
+/* SCARY BOX */
 .scarybox {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  width: 140px;
-  height: 60px;
+  padding: 15px 25px;
   background-color: whitesmoke;
   border: 5px outset red;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   opacity: 0;
   z-index: 9999;
-
   animation:
     fadeIn 4s ease forwards,
     pulse 2.5s ease-in-out infinite 4s,
     jitter 0.2s infinite alternate 6s;
-
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
 }
 
-/* SCARY TEXT */
+/* TEXT */
 .scarybox p {
   margin: 0;
   color: black;
@@ -113,6 +60,18 @@ body::after {
 }
 
 /* ANIMATIONS */
+
+@keyframes glowPulse {
+  from {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.7;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -151,42 +110,3 @@ body::after {
   60% { opacity: 1; }
 }
 
-@keyframes shrink {
-  from {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  to {
-    transform: scale(0.8);
-    opacity: 1;
-  }
-}
-
-@keyframes shrink2 {
-  from {
-    transform: scale(0.8);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1);
-    opacity: 0.6;
-  }
-}
-
-@keyframes sideFloatLeft {
-  from {
-    transform: translateY(0) scale(1);
-  }
-  to {
-    transform: translateY(-60px) scale(0.9);
-  }
-}
-
-@keyframes sideFloatRight {
-  from {
-    transform: translateY(0) scale(0.95);
-  }
-  to {
-    transform: translateY(60px) scale(1.05);
-  }
-}
