@@ -4,7 +4,8 @@
 
 body {
   margin: 0;
-  background-color: beige;
+  background-color: black;
+  color:white;
   font-family: "Gill Sans", sans-serif;
   text-align: left;
 }
@@ -66,6 +67,15 @@ body {
 }
 
 /* ================= BUTTONS ================= */
+.custom-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 5px red; }
+  50% { box-shadow: 0 0 15px crimson; }
+}
+
 .button-row {
   display: flex;
   justify-content: center;
@@ -77,8 +87,8 @@ body {
 .custom-button {
   flex: 1 1 0;             
   min-width: 0;             
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 600;
@@ -146,7 +156,7 @@ body {
   padding: 60px;
   background-color: none;
   color: black;
-  border: 2px solid black;
+  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;  
@@ -160,7 +170,8 @@ body {
   padding:clamp(20px, 5vw, 60px);
   flex: 3 1 500px;   
   min-width: 350 px;
-  background-color: none;
+  background-color: black;
+  color:white;
 }
 
 /* Section 2 narrower */
@@ -168,7 +179,8 @@ body {
   padding:clamp(20px, 4vw, 60px);
   flex: 1 2 300px;   
   min-width: 200px;
-  background-color: none;
+  background-color: black;
+  color:white;
 }
 
 /* Stack images vertically */
@@ -235,8 +247,78 @@ body {
   padding: 1rem;
 }
 
+#container span {
+  color: red;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 5px red, 0 0 10px darkred;
+}
 
 
+/* Flickering glow for headings */
+h1, h2, h3, span {
+  text-shadow: 
+    0 0 5px red,
+    0 0 10px darkred,
+    0 0 20px crimson;
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+      0 0 5px red,
+      0 0 10px darkred,
+      0 0 20px crimson;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/*pop*/
+
+.dvd-btn {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  animation: dvdBounce 6s linear infinite alternate, dvdColor 5s linear infinite;
+  box-shadow: 0 0 15px red;
+}
+
+/* Simulate continuous movement diagonally across the screen */
+@keyframes dvdBounce {
+  0%   { top: 0; left: 0; }
+  20%  { top: 20%; left: 80%; }
+  40%  { top: 80%; left: 60%; }
+  60%  { top: 60%; left: 20%; }
+  80%  { top: 10%; left: 50%; }
+  100% { top: 0; left: 100%; }
+}
+
+/* Color-changing animation */
+@keyframes dvdColor {
+  0%   { background-color: red; box-shadow: 0 0 15px red; }
+  20%  { background-color: orange; box-shadow: 0 0 15px orange; }
+  40%  { background-color: yellow; box-shadow: 0 0 15px yellow; }
+  60%  { background-color: lime; box-shadow: 0 0 15px lime; }
+  80%  { background-color: cyan; box-shadow: 0 0 15px cyan; }
+  100% { background-color: magenta; box-shadow: 0 0 15px magenta; }
+}
+
+/* Hover effect for fun */
+.dvd-btn:hover {
+  background-color: white;
+  color: red;
+  box-shadow: 0 0 25px white;
+  transform: scale(1.1);
+}
 
 
 
